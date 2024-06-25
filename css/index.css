@@ -1,0 +1,415 @@
+
+body {
+    background-color: #111;
+    color: #eee;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 4px 15px rgba(255, 152, 0, 0.5);
+    position: relative;
+    min-width: 500px;
+}
+
+.books {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1250px;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.books:hover {
+    background-color: rgba(54, 54, 54, 0.603);
+}
+
+.updatepopup {
+    display: none;
+    background-color: #111;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    margin: 0;
+}
+
+form {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+}
+
+
+
+form input[type="text"],
+form textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #555;
+    color: #fff;
+    font-size: 14px;
+}
+
+form textarea {
+    resize: none;
+}
+
+
+
+.card {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: start;
+    flex: 0 0 auto;
+    max-width: 350px;
+    min-width: 300px;
+    max-height: 400px;
+    min-height: 250px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(243, 108, 5, 0.1);
+    transition: 0.8s ease-in-out;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    margin-right: 20px;
+    overflow: hidden;
+}
+
+.action {
+    display: none;
+    align-items: end;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+    transition: 0.8s ease-in-out;
+}
+
+.card-content:hover .action {
+    display: flex;
+}
+
+.act {
+    padding: 8px;
+    border-radius: 50%;
+    margin: 5px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 0 2px 6px rgba(225, 146, 205, 0.6);
+}
+
+.action .edit {
+    background-color: #09e54b;
+    transition: background-color 1s ease-in-out;
+}
+
+.action .edit:hover {
+    background-color: #1af406;
+    border: none;
+}
+
+.action .delete {
+    background-color: #e5391b;
+    transition: background-color 1s ease-in-out;
+}
+
+.action .delete:hover {
+    background-color: #f56835;
+    border: none;
+}
+
+.card .card-content {
+    padding: 5px;
+    transition: padding 0.3s ease, box-shadow 0.3s ease;
+  
+}
+
+.card .card-content:hover {
+    padding: 8px;
+    box-shadow: 2px 4px 6px rgba(163, 227, 134, 0.2);
+}
+
+.foto {
+    margin-right: 15px;
+    border: 3px solid #fff;
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.foto img {
+    border-radius: 8px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.card:last-child {
+    margin-right: 0;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #eee;
+    margin-bottom: 10px;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 17px;
+    line-height: 1.5;
+    color: #bbb;
+    margin-bottom: 15px;
+    max-width: 20rem;
+    min-width: 20rem;
+    max-height: 4.4rem;
+    min-height: 3rem;
+    overflow: hidden;
+    position: relative;
+    transition: max-height 1s ease-in-out;
+}
+
+ .content:hover {
+    max-height: none;
+}
+
+.author {
+    font-size: 18px;
+    font-weight: 600;
+    color: #8bc34a;
+    margin-bottom: 10px;
+}
+
+.publishdate {
+    font-size: 16px;
+    color: #a9a6a6;
+    margin: 8px 0;
+}
+
+.new .add {
+    text-decoration: none;
+    color: #073939;
+    background-color: #e50914;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 15px 10px;
+    text-align: center;
+}
+
+.new .add:hover {
+    background-color: #f40612;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(255, 111, 0, 0.6);
+}
+
+.new .add:active {
+    background-color: #bf360c;
+    transform: translateY(1px);
+}
+
+.new .add:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 111, 0, 0.5);
+}
+
+/* Media Queries for Responsive Design */
+@media only screen and (max-width: 1200px) {
+    .card {
+        flex: 0 0 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .card {
+        flex: 0 0 calc(100% - 20px);
+        max-width: calc(100% - 20px);
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    .card {
+        margin-right: 0;
+    }
+}
+
+
+/* #################### POP UP ################################ */
+/* Styles for the popup container */
+
+.popup {
+    background: url('https://cdn.tapeten.com/img/psk/AzIBqZuvho06R/fototapete-marchenhaftes-buch-95.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: none; 
+    position: absolute;
+    z-index: 1; 
+    left: 0;
+    top: -75px;
+    width: 100%; 
+    height: 100%; 
+    /* background-color: rgb(244, 5, 5);  */
+  }
+  
+  /* Styles for the popup content */
+  .popup-content {
+  
+    margin: 15% auto; /* Center the popup vertically and horizontally */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* 80% of the viewport width */
+    max-width: 600px; /* Maximum width of the popup */
+  }
+  
+  /* Style for the close button */
+  .close {
+    color: #270303;
+    margin-left: 10px;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Style for the form */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+ 
+  form input[type="submit"] {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  form input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  /* ###########################Author ################################# */
+
+form {
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 100%;
+    font-family: 'Helvetica', sans-serif;
+    color: #fff;
+}
+
+/* Styles for the labels */
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Styles for the input fields */
+form input[type="text"] {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+    font-family: 'Helvetica', sans-serif;
+}
+
+/* Focus effect for input fields */
+form input[type="text"]:focus {
+    border-color: #e50914;
+    outline: none;
+}
+
+/* Specific styles for each input field */
+.nameid {
+    border-color: #e50914;
+}
+
+.bioid {
+    border-color: #e87c03;
+}
+
+.bdateid {
+    border-color: #6d4c41;
+}
+
+/* Styles for the submit button */
+form input[type="submit"] {
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    padding: 16px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+}
+
+/* Hover effect for the submit button */
+form input[type="submit"]:hover {
+    background-color: #b81d24;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Active effect for the submit button */
+form input[type="submit"]:active {
+    background-color: #831010;
+    transform: translateY(1px);
+}
+
+/* Additional styles for a clean look */
+form input[type="submit"]:focus {
+    outline: none;
+}
